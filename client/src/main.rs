@@ -55,14 +55,16 @@ fn loop_message(mut _stream: &TcpStream) {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let ip_address = String::from(&args[1]);
+    /*let ip_address =  String::from("localhost");//String::from(&args[1]);
     let address;
     if args.len() == 4 {
         let port = String::from(&args[2]);
         address = ip_address + ":" + &port;
     } else {
         address = ip_address + ":7878";
-    }
+    }*/
+    let address = String::from("localhost:8787");
+    println!("{address:?}");
     let stream = TcpStream::connect(address);
     match stream {
         Ok(stream) => {
