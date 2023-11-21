@@ -54,7 +54,7 @@ fn loop_message(mut _stream: &TcpStream) {
 
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let _args: Vec<String> = env::args().collect();
     /*let ip_address =  String::from("localhost");//String::from(&args[1]);
     let address;
     if args.len() == 4 {
